@@ -1,0 +1,24 @@
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
+</head>
+<div class="container mt-5 p-5">
+    <div class="align-items-center justify-content-center d-flex">
+        <h4 class="text-center animate__animated animate__bounceInDown pe-1 mb-5 fs-2">Welcome to My App</h4>
+    </div>
+    <input [(ngModel)]="searchTerm" type="text" class="form-control mb-5 w-50 mx-auto" placeholder="Search By User Name...">
+    <table class="table text-center table-striped">
+        <thead>
+          <tr>
+            <th scope="col" class="fs-3">User Name</th>
+            <th scope="col" class="fs-3">View Transaction</th>
+          </tr>
+        </thead>
+        <tbody>
+
+          <tr *ngFor="let i of userData |searchNames:searchTerm" class="names">
+            <td class="fw-light">{{i.name}}</td>
+             <td (click)="takeId(i.id,i.name)" scope="row" class="fw-light"><button class="btn"><i class="fa-solid fa-eye"></i></button></td>
+          </tr>
+        </tbody>
+      </table>
+</div>
