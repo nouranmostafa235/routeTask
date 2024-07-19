@@ -6,7 +6,7 @@
         <h4 class="text-center animate__animated animate__bounceInDown pe-1 mb-5 fs-2">{{name}}'s Transactions</h4>
     </div>
     <input [(ngModel)]="searchTerm" type="text" class="form-control mb-5 w-50 mx-auto" placeholder="Search By Transaction Amount...">
-    <table class="table text-center table-striped">
+    <table class="table text-center table-striped mb-4">
         <thead>
           <tr>
             <th scope="col" class="fs-3">Transaction Amount</th>
@@ -20,4 +20,7 @@
             </tr>
           </tbody>
     </table>
+    <div class="transaction-container">
+      <canvas id="transaction-graph" width="200" height="50"></canvas>
+    </div>
 </div>

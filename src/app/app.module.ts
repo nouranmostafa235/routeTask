@@ -8,6 +8,7 @@ import { TransactionComponent } from './transaction/transaction.component';
 import { SearchNamesPipe } from './search-names.pipe';
 import { SearchAmountPipe } from './search-amount.pipe';
 import { FormsModule } from '@angular/forms';
+import { BaseChartDirective } from 'ng2-charts';
 @NgModule({
   declarations: [
     AppComponent,
@@ -20,7 +21,8 @@ import { FormsModule } from '@angular/forms';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    BaseChartDirective
   ],
   providers: [],
   bootstrap: [AppComponent]
